@@ -8,7 +8,7 @@ set :deploy_to,       "/data/sites/director.5by5.tv"
 set :deploy_via,      :remote_cache
 set :rbenv_type,      :user
 
-set :rbenv_ruby,      "3.1.0"
+set :rbenv_ruby,      "2.7.2"
 set :rbenv_prefix,    "RBENV_ROOT=#{fetch(:rbenv_path)} RBENV_VERSION=#{fetch(:rbenv_ruby)} #{fetch(:rbenv_path)}/bin/rbenv exec"
 set :rbenv_map_bins,  %w{ gem bundle ruby }
 set :pty,             true
