@@ -1,3 +1,3 @@
-require_relative 'director'
+require_relative 'app'
 
 run App
