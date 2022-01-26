@@ -22,8 +22,8 @@ set :linked_files,    %w{ config/settings.yml }
 desc "Restart application"
 task :restart do
   on roles(:app), in: :sequence, wait: 5 do
-    execute :sudo, :systemctl, :restart, "puma-5by5-director"
+    execute :sudo, :systemctl, :restart, "puma-director"
   end
 end
 
-# after "deploy:publishing",  "deploy:restart"
+after "deploy:publishing",  "deploy:restart"

@@ -37,6 +37,7 @@ class App < Sinatra::Base
     episode_slug = filename.last
 
     podcast_slug = "backtowork" if podcast_slug=="b2w"
+    podcast_slug = "therubyonrailspodcast" if podcast_slug=="rubyonrails"
 
     podcasts = rom.relations[:podcasts]
     podcast = podcasts.where(slug: podcast_slug).one
