@@ -1,9 +1,11 @@
-class App < Sinatra::Baserequire "sinatra"
+require "sinatra"
 require "sinatra/config_file"
 require "sinatra/reloader" if development?
 require "rom"
 
 class App < Sinatra::Base
+  register Sinatra::ConfigFile
+
   config_file "config/settings.yml"
 
   db = settings.database_name
