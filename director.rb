@@ -1,11 +1,14 @@
 require "sinatra"
+require "sinatra/config_file"
 require "sinatra/reloader" if development?
 require "rom"
 
-db = "fireside_dev"
+config_file "config/settings.yml"
+
+db = settings.database_name
 db_options = {
-  username: "dan",
-  password: "",
+  username: settings.database_user,
+  password: settings.database_pass,
   encoding: "UTF8"
 }
 

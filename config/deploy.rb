@@ -17,3 +17,4 @@ set :stage,           :production
 set :format,          :pretty
 set :log_level,       :info
 set :keep_releases,   2
+set :linked_files,    %w{ config/settings.yml }
