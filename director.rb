@@ -12,7 +12,7 @@ db_options = {
   encoding: "UTF8"
 }
 
-rom = ROM.container(:sql, "postgres://localhost/#{db}", db_options) do |config|
+rom = ROM.container(:sql, "postgres://#{settings.database_host}/#{db}", db_options) do |config|
   config.relation(:podcasts) do
     schema(infer: true)
     auto_struct true
